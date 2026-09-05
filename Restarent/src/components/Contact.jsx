@@ -16,7 +16,7 @@ export default function Contact({ onSectionView }) {
       ref={ref}
       id="contact"
       className="relative py-16 lg:py-24 bg-white overflow-hidden"> <img src="/green.png" alt="" srcset="" className={`${inView ? "fade-in-right-normal" : "opacity-0 translate-x-8"}`}/>
-      <div className="max-w-6xl px-4 absolute felx felx-col top-48 justify-center left-52 ">
+      <div className="max-w-6xl px-4 absolute flex flex-col top-48 justify-center left-52 ">
         {/* Header */}
         <div className="text-center mb-12 ">
           <p className="text-sm tracking-[0.2em] text-red-400 uppercase font-semibold mb-2">
@@ -135,4 +135,3 @@ export default function Contact({ onSectionView }) {
     </section>
   );
 }
-

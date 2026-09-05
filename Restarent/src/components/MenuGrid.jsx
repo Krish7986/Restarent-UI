@@ -178,7 +178,7 @@ export function Chips({ onSectionView }) {
       </h2>
       <button className="rounded-xl bg-[#f3bb4e] px-10 py-4 text-xl font-semibold tracking-wide text-[#1e3a5f]">
         MAKE AN ORDER
-      </button>
+      </button>  
     </div>
   </div>
 </section>

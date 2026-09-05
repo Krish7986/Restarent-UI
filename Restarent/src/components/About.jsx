@@ -11,6 +11,15 @@ export default function About({ onSectionView }) {
         onSectionView?.("about", inView);
     }, [inView, onSectionView]);
 
+    const teamMembers = [
+        { name: "Gordon Ramsey", role: "Owner & Founder", img: "/1 - Copy.png" },
+        { name: "Gordon Ramsey", role: "Owner & Founder", img: "/2 - Copy.png" },
+        { name: "Gordon Ramsey", role: "Owner & Founder", img: "/3 - Copy.png" },
+        { name: "Gordon Ramsey", role: "Owner & Founder", img: "/4 - Copy.png" },
+        { name: "Gordon Ramsey", role: "Owner & Founder", img: "/5.png" },
+        { name: "Gordon Ramsey", role: "Owner & Founder", img: "/6.png" },
+    ];
+
     return(
         <>
         <section ref={ref} className="py-16 px-4 md:px-8">
@@ -33,53 +42,15 @@ export default function About({ onSectionView }) {
 
                     {/* Team Members Grid */}
                     <div className="grid grid-cols-3 gap-6">
-                        {/* Team Member 1 */}
-                        <div className="flex flex-col items-center">
-                            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full bg-gray-300 border-l-4 border-gray-400 overflow-hidden mb-3">
-                                <img src="/1 - Copy.png" alt="Gordon Ramsey" className="w-full h-full object-cover" />
+                        {teamMembers.map((member, index) => (
+                            <div key={index} className="flex flex-col items-center">
+                            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full bg-gray-300 border-gray-400 overflow-hidden mb-3">
+                                <img src={member.img} alt={member.name} className="w-full h-full object-cover" />
                             </div>
-                            <p className="font-semibold text-center text-sm md:text-base">Gordon Ramsey</p>
-                            <p className="text-gray-500 text-xs md:text-sm">Owner & Founder</p>
-                        </div>
-
-                        {/* Team Member 2 */}
-                        <div className="flex flex-col items-center">
-                            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full bg-gray-300 overflow-hidden mb-3">
-                                <img src="/2 - Copy.png" alt="Gordon Ramsey" className="w-full h-full object-cover" />
+                            <p className="font-semibold text-center text-sm md:text-base">{member.name}</p>
+                            <p className="text-gray-500 text-xs md:text-sm">{member.role}</p>
                             </div>
-                            <p className="font-semibold text-center text-sm md:text-base">Gordon Ramsey</p>
-                            <p className="text-gray-500 text-xs md:text-sm">Owner & Founder</p>
-                        </div>
-
-                        {/* Team Member 3 */}
-                        <div className="flex flex-col items-center">
-                            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full bg-gray-300 overflow-hidden mb-3">
-                                <img src="/3 - Copy.png" alt="Gordon Ramsey" className="w-full h-full object-cover" />
-                            </div>
-                            <p className="font-semibold text-center text-sm md:text-base">Gordon Ramsey</p>
-                            <p className="text-gray-500 text-xs md:text-sm">Owner & Founder</p>
-                        </div>
-                        <div className="flex flex-col items-center">
-                            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full bg-gray-300 overflow-hidden mb-3">
-                                <img src="/4 - Copy.png" alt="Gordon Ramsey" className="w-full h-full object-cover" />
-                            </div>
-                            <p className="font-semibold text-center text-sm md:text-base">Gordon Ramsey</p>
-                            <p className="text-gray-500 text-xs md:text-sm">Owner & Founder</p>
-                        </div>
-                        <div className="flex flex-col items-center">
-                            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full bg-gray-300 overflow-hidden mb-3">
-                                <img src="/5.png" alt="Gordon Ramsey" className="w-full h-full object-cover" />
-                            </div>
-                            <p className="font-semibold text-center text-sm md:text-base">Gordon Ramsey</p>
-                            <p className="text-gray-500 text-xs md:text-sm">Owner & Founder</p>
-                        </div>
-                        <div className="flex flex-col items-center">
-                            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full bg-gray-300 overflow-hidden mb-3">
-                                <img src="/6.png" alt="Gordon Ramsey" className="w-full h-full object-cover" />
-                            </div>
-                            <p className="font-semibold text-center text-sm md:text-base">Gordon Ramsey</p>
-                            <p className="text-gray-500 text-xs md:text-sm">Owner & Founder</p>
-                        </div>
+                        ))}
                     </div>
                 </div>
 
